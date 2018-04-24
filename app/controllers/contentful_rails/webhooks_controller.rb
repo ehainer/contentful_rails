@@ -30,7 +30,7 @@ class ContentfulRails::WebhooksController < ActionController::Base
     ActiveSupport::Notifications.instrument("Contentful.#{update_type}", params)
 
     #must return an empty response
-    render body: nil
+    head :ok
   end
 
   def debug
